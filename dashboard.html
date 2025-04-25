@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rusco Water - Work Log</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="dashboard">
+      <h1>Rusco Water Company</h1>
+      <h2>Daily Work Log</h2>
+      <p id="currentTime"></p>
+      
+      <form id="logForm">
+        <div class="form-group">
+          <label for="jobType">Job Type:</label>
+          <select id="jobType" required>
+            <option value="">-- Select --</option>
+            <option value="office">Office</option>
+            <option value="field">Field</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="photo">Verification Photo:</label>
+          <input type="file" id="photo" accept="image/*" capture="environment" required>
+          <img id="photoPreview" class="photo-preview">
+        </div>
+        
+        <button type="submit" class="btn">Submit Daily Log</button>
+      </form>
+      
+      <div id="message" class="message"></div>
+      <button id="logoutBtn" class="btn logout">Logout</button>
+    </div>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
